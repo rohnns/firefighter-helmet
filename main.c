@@ -1,22 +1,3 @@
-/**
- * Firefighter Project - Bare Metal STM32F4xx
- *
- * Peripherals used:
- *   ADC1  CH0 (PA0) -> MQ7 gas sensor
- *   ADC1  CH1 (PA1) -> LM35 temperature sensor
- *   USART1 (PA9/PA10) -> GPS module  (115200 8N1)
- *   USART2 (PA2/PA3)  -> Debug printf (115200 8N1)
- *   PA5               -> Buzzer (active HIGH)
- *   PA6               -> Emergency Button (EXTI9_5, falling edge)
- *   PA7               -> Alarm LED (active HIGH, indicates alarm sent)
- *
- * Assumptions:
- *   - STM32F4xx family (e.g. F401/F411/F446), 84 MHz core clock
- *   - HSI 16 MHz -> PLL -> 84 MHz SYSCLK  (adjust PLL constants if needed)
- *   - 3.3 V VDDA/Vref
- *   - GPS sends standard NMEA $GPGGA sentences
- */
-
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
